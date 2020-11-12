@@ -18,4 +18,6 @@
 	@import url("./common/css/iconfont.css");
 	@import url("./common/css/animate.css");
 	@import url("./common/css/myanimate.css");
+	/* 自定义css主题*/
+	@import url("./common/css/theme.css");
 </style>

@@ -1,5 +1,7 @@
 <template>
-	<view>
+	<!-- 根据nightStatus值切换白天还是黑夜 -->
+	
+	<view style="height: 100vh;" :class="nightStatus?'nightThem':''">
 		<!-- 歌曲信息 -->
 		<view class="d-inline-block w-100 text-center py-4">
 			<view >
@@ -55,7 +57,7 @@
 					<my-icon iconId="icon-aixinfengxian" iconSize="60"></my-icon>
 					<text class="pt-1">收藏</text>
 				</view>
-				<view class="flex flex-column align-center">
+				<view class="flex flex-column align-center" @tap="changeStatus('nightStatus')">
 					<my-icon iconId="icon-yejianmoshi" iconSize="60"></my-icon>
 					<text class="pt-1">夜间模式</text>
 				</view>
@@ -127,14 +129,12 @@
   export default {
 
     data() {
-
-      return {
-
-
-
-      }
-
-    },
+  		return {
+              listStatus: false,   //
+  			collectStatus: false,
+  			nightStatus: false
+  		}
+		},
 
     filters: {
 
@@ -194,7 +194,11 @@
 
         'sliderToPlay'
 
-      ])
+      ]),
+	  //改变状态
+	  changeStatus(statusType){
+		  this[statusType]=! this[statusType]
+	  }
 
     }
 
