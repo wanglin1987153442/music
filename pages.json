@@ -11,27 +11,17 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, {
-			"path": "pages/type/type",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/collection/collection",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
 		}
-	],
+	    ,{
+            "path" : "pages/music-details/music-details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -45,29 +35,31 @@
 		"selectedColor": "#009CFF",
 		"list": [{
 				// 默认显示的图片
-				// "iconPath": "static/tabbar/index.png",
+				"iconPath": "static/tabbar/index.png",
 				//被选中时显示的图片
-				// "selectedIconPath": "static/tabbar/index-selected.png",
+				"selectedIconPath": "static/tabbar/index-selected.png",
 				//被选中时跳转的路径
 				"pagePath": "pages/index/index",
 				//标签页名称
 				"text": "首页"
-			}, {
-				// "iconPath": "static/tabbar/list.png",
-				// "selectedIconPath": "static/tabbar/list-selected.png",
-				"pagePath": "pages/type/type",
-				"text": "分类"
-			}, {
-				// "iconPath": "static/tabbar/my.png",
-				// "selectedIconPath": "static/tabbar/my-selected.png",
+			},  {
+				"iconPath": "static/tabbar/music.png",
+				"selectedIconPath": "static/tabbar/music-selected.png",
 				"pagePath": "pages/collection/collection",
+				"text": "音乐"
+			},
+			
+			{
+				"iconPath": "static/tabbar/virus.png",
+				"selectedIconPath": "static/tabbar/virus-selected.png",
+				"pagePath": "pages/my/my",
 				"text": "收藏"
 			},
 			{
-				// "iconPath": "static/tabbar/my.png",
-				// "selectedIconPath": "static/tabbar/my-selected.png",
-				"pagePath": "pages/my/my",
-				"text": "我的"
+				"iconPath": "static/tabbar/more.png",
+				"selectedIconPath": "static/tabbar/more-selected.png",
+				"pagePath": "pages/type/type",
+				"text": "更多"
 			}
 		]
 	}
