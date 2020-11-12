@@ -45,7 +45,7 @@
 			},  {
 				"iconPath": "static/tabbar/music.png",
 				"selectedIconPath": "static/tabbar/music-selected.png",
-				"pagePath": "pages/collection/collection",
+				"pagePath": "pages/music-details/music-details",
 				"text": "音乐"
 			},
 			
