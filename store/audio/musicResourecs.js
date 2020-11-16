@@ -5,8 +5,9 @@ export default {
 			src: '/static/mp3/1.mp3',
 			singer: {
 				name: "石进",
-				synopsIs: "石进，1981年4月5日生，广西柳州人"
-			}
+				synopsis: "石进，1981年4月5日生，广西柳州人"
+			},
+			cover:'/static/music/beauty.png'
 		},
 		{
 			id: 20002,
@@ -14,8 +15,10 @@ export default {
 			src: '/static/mp3/2.mp3',
 			singer: {
 				name: "Bandari",
-				synopsIs: "Andemund 乐团-团圆,CLANNAD(日本) - メグメル"
-			}
+				synopsis: "Andemund 乐团-团圆,CLANNAD(日本) - メグメル"
+			},
+			cover:'/static/music/beauty1.png'
+			
 		},
 	]
 }

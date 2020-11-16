@@ -1732,17 +1732,126 @@ var render = function() {
       _c(
         "v-uni-view",
         {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$g(33, "v-show"),
+              expression: "_$g(33,'v-show')"
+            }
+          ],
           staticClass: _vm._$g(33, "sc"),
-          staticStyle: { height: "400rpx", "border-radius": "30rpx" },
+          staticStyle: {
+            height: "260rpx",
+            "border-radius": "30rpx",
+            "z-index": "0"
+          },
           attrs: { _i: 33 }
         },
         [
           _c(
             "v-uni-view",
+            { staticClass: _vm._$g(34, "sc"), attrs: { _i: 34 } },
+            [
+              _c(
+                "v-uni-view",
+                { attrs: { _i: 35 } },
+                [
+                  _c(
+                    "v-uni-view",
+                    { attrs: { _i: 36 } },
+                    [
+                      _c(
+                        "v-uni-text",
+                        { staticClass: _vm._$g(37, "sc"), attrs: { _i: 37 } },
+                        [_vm._v("歌曲:")]
+                      ),
+                      _c(
+                        "v-uni-text",
+                        { staticClass: _vm._$g(38, "sc"), attrs: { _i: 38 } },
+                        [_vm._v(_vm._$g(38, "t0-0"))]
+                      )
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-uni-view",
+                    { attrs: { _i: 39 } },
+                    [
+                      _c(
+                        "v-uni-text",
+                        { staticClass: _vm._$g(40, "sc"), attrs: { _i: 40 } },
+                        [_vm._v("歌手")]
+                      ),
+                      _c(
+                        "v-uni-text",
+                        { staticClass: _vm._$g(41, "sc"), attrs: { _i: 41 } },
+                        [_vm._v(_vm._$g(41, "t0-0"))]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _c(
+                "v-uni-view",
+                {
+                  attrs: { _i: 42 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_c("my-icon", { attrs: { _i: 43 } })],
+                1
+              )
+            ],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { attrs: { _i: 44 } },
+            [
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(45, "sc"), attrs: { _i: 45 } },
+                [_vm._v("歌手简介：")]
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(46, "sc"), attrs: { _i: 46 } },
+                [_vm._v(_vm._$g(46, "t0-0"))]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        {
+          directives: [
             {
-              staticClass: _vm._$g(34, "sc"),
+              name: "show",
+              rawName: "v-show",
+              value: _vm._$g(47, "v-show"),
+              expression: "_$g(47,'v-show')"
+            }
+          ],
+          staticClass: _vm._$g(47, "sc"),
+          staticStyle: { height: "260rpx", "border-radius": "30rpx" },
+          attrs: { _i: 47 }
+        },
+        [
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(48, "sc"),
               staticStyle: { height: "50rpx" },
-              attrs: { _i: 34 }
+              attrs: { _i: 48 }
             },
             [_vm._v("列表选择")]
           ),
@@ -1750,52 +1859,52 @@ var render = function() {
             "v-uni-scroll-view",
             {
               staticStyle: { height: "350rpx" },
-              attrs: { "scroll-y": true, _i: 35 }
+              attrs: { "scroll-y": true, _i: 49 }
             },
             [
-              _vm._l(_vm._$g(36, "f"), function(item, index, $20, $30) {
+              _vm._l(_vm._$g(50, "f"), function(item, index, $20, $30) {
                 return [
                   _c(
                     "v-uni-view",
                     {
                       key: item["k0"],
-                      staticClass: _vm._$g("37-" + $30, "sc"),
+                      staticClass: _vm._$g("51-" + $30, "sc"),
                       staticStyle: { height: "85rpx" },
-                      attrs: { "hover-class": "bg-light", _i: "37-" + $30 }
+                      attrs: { "hover-class": "bg-light", _i: "51-" + $30 }
                     },
                     [
                       _c(
                         "v-uni-text",
                         {
-                          staticClass: _vm._$g("38-" + $30, "sc"),
-                          attrs: { _i: "38-" + $30 }
+                          staticClass: _vm._$g("52-" + $30, "sc"),
+                          attrs: { _i: "52-" + $30 }
                         },
-                        [_vm._v(_vm._$g("38-" + $30, "t0-0"))]
+                        [_vm._v(_vm._$g("52-" + $30, "t0-0"))]
                       ),
                       _c(
                         "v-uni-text",
                         {
-                          staticClass: _vm._$g("39-" + $30, "sc"),
-                          attrs: { _i: "39-" + $30 }
+                          staticClass: _vm._$g("53-" + $30, "sc"),
+                          attrs: { _i: "53-" + $30 }
                         },
-                        [_vm._v(_vm._$g("39-" + $30, "t0-0"))]
+                        [_vm._v(_vm._$g("53-" + $30, "t0-0"))]
                       ),
                       _c(
                         "v-uni-view",
                         {
-                          staticClass: _vm._$g("40-" + $30, "sc"),
-                          attrs: { _i: "40-" + $30 }
+                          staticClass: _vm._$g("54-" + $30, "sc"),
+                          attrs: { _i: "54-" + $30 }
                         },
                         [
                           _c(
                             "v-uni-text",
                             {
-                              staticClass: _vm._$g("41-" + $30, "sc"),
-                              attrs: { _i: "41-" + $30 }
+                              staticClass: _vm._$g("55-" + $30, "sc"),
+                              attrs: { _i: "55-" + $30 }
                             },
                             [_vm._v("播放")]
                           ),
-                          _c("my-icon", { attrs: { _i: "42-" + $30 } })
+                          _c("my-icon", { attrs: { _i: "56-" + $30 } })
                         ],
                         1
                       )
@@ -1806,6 +1915,35 @@ var render = function() {
               })
             ],
             2
+          )
+        ],
+        1
+      ),
+      _c(
+        "uni-popup",
+        { ref: "popup", attrs: { _i: 57 } },
+        [
+          _c(
+            "v-uni-view",
+            {
+              staticClass: _vm._$g(58, "sc"),
+              class: _vm._$g(58, "c"),
+              staticStyle: {
+                width: "600rpx",
+                height: "850rpx",
+                "border-radius": "40rpx",
+                opacity: "0.5"
+              },
+              attrs: { _i: 58 }
+            },
+            [
+              _c(
+                "v-uni-text",
+                { staticClass: _vm._$g(59, "sc"), attrs: { _i: 59 } },
+                [_vm._v(_vm._$g(59, "t0-0"))]
+              )
+            ],
+            1
           )
         ],
         1

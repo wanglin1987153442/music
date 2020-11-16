@@ -16,7 +16,7 @@
 		<!-- 歌曲图片 -->
 		<view class="flex align-center justify-center" style="height: 420rpx;">
 			<image
-				src="../../static/music/beauty.png"
+				:src=audioCover
 				mode="widthFix"
 				lazy-load
 				style="border-radius: 35rpx;
@@ -38,27 +38,28 @@
 		<view>
 			<view class="flex align-center justify-center" style="padding-top: 60rpx;">
 				<view class="mr-3" @tap="PreOrNext('pre')"><my-icon iconId="icon-shangyixiang" iconSize="82"></my-icon></view>
-				<view class="mx-5" @tap="PlayOrPause"><my-icon iconId="icon-bofang1" iconSize="80"></my-icon></view>
+				<view class="mx-5" @tap="PlayOrPause"><my-icon :iconId="playStatus?'icon-bofang':'icon-ziyuan'" iconSize="80"></my-icon></view>
 				<view class="ml-2" @tap="PreOrNext('next')"><my-icon iconId="icon-xiayixiang" iconSize="85"></my-icon></view>
 			</view>
 
 			<view class="flex align-center justify-center font text-light-black" style="padding-top: 100rpx;">
 				<view class="flex flex-column align-center" @tap="changeStatus('listStatus')">
-					<my-icon iconId="icon-icon--" iconSize="60"></my-icon>
+					<my-icon :iconId="!listStatus?'icon-icon--':'icon-liebiao'" iconSize="60"></my-icon>
 					<text class="pt-1">播放列表</text>
 				</view>
 				<view class="flex flex-column align-center" style="padding: 0 80rpx;" @tap="changeStatus('collectStatus')">
-					<my-icon iconId="icon-aixinfengxian" iconSize="60"></my-icon>
+					<my-icon :iconId="!collectStatus?'icon-aixinfengxian':'icon-xhuan2'" iconSize="60"></my-icon>
 					<text class="pt-1">收藏</text>
 				</view>
 				<view class="flex flex-column align-center" @tap="changeStatus('nightStatus')">
-					<my-icon iconId="icon-yejianmoshi" iconSize="60"></my-icon>
+					<my-icon :iconId="!nightStatus?'icon-yejianmoshi':'icon-yueliang'" iconSize="60"></my-icon>
 					<text class="pt-1">夜间模式</text>
 				</view>
 			</view>
-		</view>
+				</view>
 		<!-- 歌手具体信息 -->
-		<!-- <view class="fixed-bottom shadow p-2" style="height:260rpx;border-radius: 30rpx;">
+		<view class="fixed-bottom shadow p-2 animated fadeInUp" style="height:260rpx;border-radius: 30rpx; 
+		z-index: 0;"v-show="!listStatus" >
 		<view class="flex justify-between">
 			<view >
 				<view>
@@ -70,19 +71,24 @@
 					<text class="font-weight-bold">{{singerName}}</text>
 				</view>
 			</view>
-			<my-icon iconId="icon-jieshao" iconSize="65"></my-icon>
+			<view @click="showSingerSynopsis">
+				<my-icon iconId="icon-jieshao" iconSize="65" ></my-icon>
+			</view>
 		</view>
 		<view >
-			<view class="font-md pt-2">
+		
+			<view  class="font-md pt-2">
 				歌手简介：
 			</view>
 			<view class="text-ellipsis w-100">
 				{{singerSynopsis}}
 			</view>
+	
 		</view>
-			</view> -->
+		</view>
 		<!-- 播放列表部分 -->
-		<view class="fixed-bottom shadow p-2" style="height: 400rpx;border-radius: 30rpx;">
+		<view v-show="listStatus"  class="fixed-bottom shadow p-2 animated fadeInUp" 
+		style="height: 260rpx;border-radius: 30rpx;">
 			<view class="font-weight-bold font-md" style="height: 50rpx;">列表选择</view>
 			<scroll-view scroll-y style="height: 350rpx;">
 				<block v-for="(item, index) in audioList" :key="item.id">
@@ -97,7 +103,14 @@
 				</block>
 			</scroll-view>
 		</view>
+		<uni-popup ref="popup">
+			<view class="px-2 shadow" style="width: 600rpx; height: 850rpx;border-radius: 40rpx;opacity: 0.5;"
+			:class="nightStatus?'nightThem':'bg-white'">
+				<text class="font ">	{{singerSynopsis}}</text>
+			</view>
+		</uni-popup>
 	</view>
+	
 </template>
 
 <script>
@@ -135,19 +148,20 @@ export default {
 			audioList: ({ audio }) => audio.audioList
 		}),
 
-		...mapGetters(['audioName', 'singerName', 'singerSynopsis'])
+		...mapGetters(['audioName', 'singerName', 'singerSynopsis','audioCover'])
 	},
 
 	methods: {
 		...mapActions(['PlayOrPause', 'PreOrNext', 'sliderToPlay', 'selectPlay']),
 		//改变状态
 		changeStatus(statusType) {
+			console.log(statusType)
 			this[statusType] = !this[statusType];
 		},
 		//展示歌手简介详情
-		// showSingerSynopsis(){
-		// 	this.$refs.popup.open()
-		// }
+		showSingerSynopsis(){
+			this.$refs.popup.open()
+		}
 	}
 };
 </script>

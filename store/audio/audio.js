@@ -10,13 +10,19 @@ export default {
 		currentPlayIndex: 0, //当前歌曲标识
 		durationTime: 0, //音频总时长
 		currentTime: 0, //音频播放时刻
-		audioList: []
+		audioList: [],
+		audioCover:'',
 	},
 	getters: {
 		//音频name
 		audioName(state) {
 			let curIndex = state.currentPlayIndex;
 			return musics[curIndex].name
+		},
+		audioCover(state){
+			let curIndex = state.currentPlayIndex;
+			let cover = musics[curIndex].cover;
+				return cover
 		},
 		// 歌手name
 		singerName(state) {
