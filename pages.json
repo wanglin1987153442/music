@@ -3,63 +3,97 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
 			}
 		}, {
-			"path": "components/myaudio/myaudio",
+			"path": "pages/sort/sort",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "分类"
+			}
+		}, {
+			"path": "pages/collection/collection",
+			"style": {
+				"navigationBarTitleText": "收藏"
+			}
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/readLIst/readLIst",
+			"style": {
+				"navigationBarTitleText": "榜单"
+			}
+		}, {
+			"path": "pages/listenNoval/listenNoval",
+			"style": {
+				"navigationBarTitleText": "小说"
+			}
+		}, {
+			"path": "pages/listenMusic/listenMusic",
+			"style": {
+				"navigationBarTitleText": "音乐"
+			}
+		}, {
+			"path": "pages/listenKnowledge/listenKnowledge",
+			"style": {
+				"navigationBarTitleText": "知识"
+			}
+		}, {
+			"path": "pages/musicDetail/musicDetail",
+			"style": {
+				"navigationBarTitleText": "音乐详情"
+			}
+		}, {
+			"path": "pages/bookDetail/bookDetail",
+			"style": {
+				"navigationBarTitleText": "图书详情"
+			}
+		}, {
+			"path": "pages/reading/reading",
+			"style": {
+				"navigationBarTitleText": "阅读页"
 			}
 		}
-	    ,{
-            "path" : "pages/music-details/music-details",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"titleNView": false,
+			"bounce": "none"
+		}
 	},
 	"tabBar": {
-		"backgroundColor": "#FFFFFF",
-		"borderStyle": "black",
-		"color": "#BDBDBD",
-		"selectedColor": "#009CFF",
+		"selectedColor": "#dc4d2f",
+		"fontSize": "12px",
+		"backgroundColor": "#f4f7fc",
+		"borderStyle": "white",
 		"list": [{
-				// 默认显示的图片
-				"iconPath": "static/tabbar/index.png",
-				//被选中时显示的图片
-				"selectedIconPath": "static/tabbar/index-selected.png",
-				//被选中时跳转的路径
 				"pagePath": "pages/index/index",
-				//标签页名称
-				"text": "首页"
-			},  {
-				"iconPath": "static/tabbar/music.png",
-				"selectedIconPath": "static/tabbar/music-selected.png",
-				"pagePath": "pages/music-details/music-details",
-				"text": "音乐"
-			},
-			
-			{
-				"iconPath": "static/tabbar/virus.png",
-				"selectedIconPath": "static/tabbar/virus-selected.png",
-				"pagePath": "pages/my/my",
-				"text": "收藏"
+				"text": "首页",
+				"iconPath": "static/tabbar/index.png",
+				"selectedIconPath": "static/tabbar/indexed.png"
 			},
 			{
-				"iconPath": "static/tabbar/more.png",
-				"selectedIconPath": "static/tabbar/more-selected.png",
-				"pagePath": "pages/type/type",
-				"text": "更多"
+				"pagePath": "pages/sort/sort",
+				"text": "分类",
+				"iconPath": "static/tabbar/sort.png",
+				"selectedIconPath": "static/tabbar/sorted.png"
+			},
+			{
+				"pagePath": "pages/collection/collection",
+				"text": "收藏",
+				"iconPath": "static/tabbar/collection.png",
+				"selectedIconPath": "static/tabbar/collectioned.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/tabbar/mine.png",
+				"selectedIconPath": "static/tabbar/mined.png"
 			}
 		]
 	}
